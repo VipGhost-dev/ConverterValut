@@ -1,0 +1,58 @@
+﻿<Window x:Class="ConverterValut.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConverterValut"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                        <RotateTransform Angle="48" CenterX="0.5" CenterY="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#FF12B5C1" Offset="0.006"/>
+                <GradientStop Color="#FFFF0281" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid x:Name="StartPanel">
+            <Image x:Name="Moneta" HorizontalAlignment="Center" Height="227" Margin="0,20,0,0" VerticalAlignment="Top" Width="226" Source="/Monetka.png"/>
+            <Label x:Name="txtConvert" Content="Конвертер валют" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Style="{StaticResource Headers}" Margin="0,264,0,0"/>
+            <Button x:Name="Start_btn" Content="Старт" HorizontalAlignment="Center" Margin="0,341,0,0" VerticalAlignment="Top" Height="50" Width="252" Click="Start_Click" Template="{StaticResource btns}" FontSize="18"/>
+        </Grid>
+        <Grid x:Name="Curs" Visibility="Hidden">
+            <Image HorizontalAlignment="Left" Height="46" Margin="34,22,0,0" VerticalAlignment="Top" Width="46" Source="/Monetka.png"/>
+            <Label Content="Конвертер валют" HorizontalAlignment="Left" Margin="97,26,0,0" VerticalAlignment="Top" Style="{StaticResource Headers}" FontSize="24"/>
+            <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="115" Margin="85,139,0,0" VerticalAlignment="Top" Width="267" CornerRadius="10,10,10,10"/>
+            <Label Content="Количество" HorizontalAlignment="Left" Margin="97,145,0,0" VerticalAlignment="Top"/>
+            <Label Content="Из" HorizontalAlignment="Left" Margin="97,181,0,0" VerticalAlignment="Top"/>
+            <Label Content="В" HorizontalAlignment="Left" Margin="97,217,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="OpenFileBtn" Content="Выбрать файл" HorizontalAlignment="Left" Margin="459,143,0,0" VerticalAlignment="Top" Height="37" Width="165" Template="{StaticResource btns}"/>
+            <Button x:Name="CountBtn" Content="Конвертировать" HorizontalAlignment="Left" Margin="459,211,0,0" VerticalAlignment="Top" Height="37" Width="165" Click="CountBtn_Click" Template="{StaticResource btns}" Background="#FF4A7F82"/>
+            <Label Content="Результат" HorizontalAlignment="Left" Margin="100,349,0,0" VerticalAlignment="Top"/>
+            <Label Content="Курс" HorizontalAlignment="Left" Margin="100,259,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="CountBox" HorizontalAlignment="Left" Margin="218,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <ComboBox x:Name="OUT" HorizontalAlignment="Left" Margin="218,185,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="OUT_SelectionChanged">
+                <ComboBoxItem Content="RUB"/>
+                <ComboBoxItem Content="USD"/>
+                <ComboBoxItem Content="EUR"/>
+                <ComboBoxItem Content="JPY"/>
+            </ComboBox>
+            <ComboBox x:Name="IN" HorizontalAlignment="Left" Margin="218,219,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="IN_SelectionChanged">
+            <ComboBoxItem Content="RUB"/>
+            <ComboBoxItem Content="USD"/>
+            <ComboBoxItem Content="EUR"/>
+            <ComboBoxItem Content="JPY"/>
+            </ComboBox>
+            <Label x:Name="CURSRes" Content="0" HorizontalAlignment="Left" Margin="218,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="ResultText" Content="" HorizontalAlignment="Left" Margin="227,349,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
+    </Grid>
+</Window>
