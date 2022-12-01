@@ -8,7 +8,7 @@ ConverterValut - само название говорит за себя.<br/>П�
 Это можно сделать двумя способами.<br/>
 1 Способ:<br/>
 Скопировать в адрессной строке<br/>
-![Клонирование репозитория](https://psv4.userapi.com/c235031/u216249055/docs/d34/e88a903c3a59/AdressString.jpg?extra=0i)<br/>
+![Клонирование репозитория](https://psv4.userapi.com/c235031/u216249055/docs/d34/e88a903c3a59/AdressString.jpg?extra=0ipp3gs8LwB0__WllamdqWQ1FoS3pxUAYwluzQNqb6LoZzsvYaSXR6F7q4qKqwKNuU08ATQrwLcQTQIFi9nb42uz3PGyZ2g23kSO4E_uJPiOO1v3q67pF6UHVG_FUBqtFyv7B1isMVJgYz3VMN1ldfcP)<br/>
 2 Способ:<br/>
 
 ### Необходимые условия
